@@ -33,8 +33,8 @@ export default function Login() {
     <div className="min-h-screen bg-grid bg-background flex items-center justify-center p-6">
       <Card className="w-full max-w-md animate-glow">
         <CardHeader>
-          <CardTitle>Welcome back</CardTitle>
-          <CardDescription>Log in to your account</CardDescription>
+          <CardTitle className='text-center mb-3'>Welcome back</CardTitle>
+          <CardDescription className='text-center'>Log in to your account</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={onSubmit} className="space-y-4">
@@ -51,9 +51,9 @@ export default function Login() {
               <LogIn className="mr-2" size={18} /> {loading ? 'Signing in...' : 'Sign in'}
             </Button>
           </form>
-          <div className="mt-4 text-sm text-muted">
+          <div className="mt-4 text-sm text-muted text-center">
             Don't have an account?{' '}
-            <Link to="/signup" className="text-primary hover:underline">Sign up</Link>
+            <Link to="/signup" className="text-primary hover:underline pl-1 cursor-pointer">Sign up</Link>
           </div>
         </CardContent>
       </Card>

@@ -34,8 +34,8 @@ export default function Signup() {
     <div className="min-h-screen bg-grid bg-background flex items-center justify-center p-6">
       <Card className="w-full max-w-md animate-glow">
         <CardHeader>
-          <CardTitle>Create your account</CardTitle>
-          <CardDescription>Sign up to get started</CardDescription>
+          <CardTitle className='text-center mb-3'>Create your account</CardTitle>
+          <CardDescription className='text-center'>Sign up to get started</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={onSubmit} className="space-y-4">
@@ -56,9 +56,9 @@ export default function Signup() {
               <UserPlus className="mr-2" size={18} /> {loading ? 'Creating account...' : 'Create account'}
             </Button>
           </form>
-          <div className="mt-4 text-sm text-muted">
+          <div className="mt-4 text-sm text-muted text-center">
             Already have an account?{' '}
-            <Link to="/login" className="text-primary hover:underline">Sign in</Link>
+            <Link to="/login" className="text-primary hover:underline pl-1 cursor-pointer">Sign in</Link>
           </div>
         </CardContent>
       </Card>
