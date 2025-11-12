@@ -21,8 +21,9 @@ export default function Login() {
     setLoading(true)
     setError(null)
     try {
-      await login({ username, email, password })
-      navigate('/')
+      const data = await login({ username, email, password })
+      localStorage.setItem('token', data.access_token)
+      navigate('/dashboard')
     } catch (err: any) {
       setError(err?.message || 'Login failed')
     } finally {
